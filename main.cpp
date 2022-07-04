@@ -26,7 +26,9 @@ void Script::start()
 
     if ( Person::instance()->data_p->IQ > 120 )
     {
-        cout << higher_iq_way::ways[rand() % 3 + 0] << '\n';
+        cout << higher_iq_way::ways_study[rand() % 3 + 0] << '\n';
+        Sleep(1500);
+        cout << higher_iq_way::ways_study_continue[rand() % 3 + 0] << '\n';
     }   
 }
 
@@ -42,14 +44,12 @@ void Script::end()
 
 int main()
 {
-    clock_t tStart = clock();
-    SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
+    // clock_t tStart = clock();
     // /*--------------------------------------*/ // Начало работы
     Script::start(); 
     Script::end(); 
     // /*--------------------------------------*/ // Конец работы
-    printf("Time taken: %.10fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
+    // printf("Time taken: %.10fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
     getchar();
 }
 
